@@ -39,6 +39,15 @@ const loadNews = async (catId) => {
         newsContainer.appendChild(card);
     })
 }
-loadNews('01')
 
+const handleSearch = () =>{
+  const value = document.getElementById('search-box').value;
+  if(value){
+    loadNews(value)
+  }
+  else{
+    alert("enter a category id");
+  }
+}
+loadNews('01')
 loadCategories()
